@@ -1,0 +1,41 @@
+{
+  "name": "prueba-tecnica-giphy",
+  "version": "1.0.0",
+  "description": "This is a technical interview only",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HectorMtz22/prueba-tecnica-giphy.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "interview"
+  ],
+  "author": "Hector Mtz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HectorMtz22/prueba-tecnica-giphy/issues"
+  },
+  "homepage": "https://github.com/HectorMtz22/prueba-tecnica-giphy#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^4.1.3",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
