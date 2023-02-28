@@ -5,12 +5,20 @@ body {
 }
 
 .main {
+    width: 70vw;
+    margin: auto;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 .title {
     padding: 2em;
+    flex: 1;
+}
+
+.gif {
+    flex: 1;
 }

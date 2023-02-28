@@ -16,7 +16,7 @@ const App = () => {
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>{title}</h1>
-      <Gif gif={gif} />
+      <Gif className={styles.gif} gif={gif} />
     </main>
 
   )

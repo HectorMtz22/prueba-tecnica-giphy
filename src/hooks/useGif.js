@@ -1,25 +1,26 @@
 import { useState, useEffect } from 'react'
-import { getThreeWordsApi } from '../api/catfact'
+import { getFactApi } from '../api/catfact'
 import { getGifApi } from '../api/giphy'
+import getThreeWords from '../helper/getThreeWords'
 
 const useGif = () => {
-  const [search, setSearch] = useState('')
+  const [title, setTitle] = useState('')
   const [gif, setGif] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     setIsLoading(true)
-    getThreeWordsApi()
-      .then(string => setSearch(string))
+    getFactApi()
+      .then(string => setTitle(string))
   }, [])
   useEffect(() => {
     setIsLoading(true)
-    getGifApi(search)
+    getGifApi(getThreeWords(title))
       .then(gif => setGif(gif))
       .then(() => setIsLoading(false))
-  }, [search])
+  }, [title])
 
   return {
-    gif, isLoading, title: search
+    gif, isLoading, title
   }
 }
 
