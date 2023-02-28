@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { getGifApi } from './api/giphy'
 import { Gif } from './Gif'
 
+import styles from './App.module.css'
+
 const App = () => {
   const [search, setSearch] = useState('')
   const [gif, setGif] = useState(null)
@@ -19,13 +21,19 @@ const App = () => {
       .then(() => setIsLoading(false))
   }, [search])
 
-  if (isLoading) return <h2>Loading...</h2>
+  if (isLoading) {
+    return (
+      <main className={styles.main}>
+        <h2>Loading...</h2>
+      </main>
+    )
+  }
 
   return (
-    <>
-      <h1>{search}</h1>
+    <main className={styles.main}>
+      <h1 className={styles.title}>{search}</h1>
       <Gif gif={gif} />
-    </>
+    </main>
 
   )
 }
