@@ -12,6 +12,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
 .title {
@@ -21,4 +22,19 @@ body {
 
 .gif {
     flex: 1;
+}
+
+@media  (max-width: 800px) {
+    .main {
+        width: 100vw;
+        flex-direction: row;
+        align-items: start;
+    }
+    .title {
+        padding: 0.5em;
+    }
+
+    .gif {
+        width: 100%;
+    }
 }
