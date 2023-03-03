@@ -16,7 +16,7 @@ const useGif = () => {
     setIsLoading(true)
     getGifApi(getThreeWords(title))
       .then(gif => setGif(gif))
-      .then(() => setIsLoading(false))
+      .finally(() => setIsLoading(false))
   }, [title])
 
   return {
